@@ -82,6 +82,7 @@ fetchRestaurantFromURL = (callback) => {
 fillRestaurantHTML = (restaurant = self.restaurant) => {
   const name = document.getElementById('restaurant-name');
   name.innerHTML = restaurant.name;
+  name.setAttribute('style', 'background-color:#252831');
 
   const address = document.getElementById('restaurant-address');
   address.innerHTML = restaurant.address;
@@ -131,6 +132,7 @@ fillReviewsHTML = (reviews = self.restaurant.reviews) => {
   const title = document.createElement('h2');
   title.innerHTML = 'Reviews';
   container.appendChild(title);
+  title.setAttribute('style', 'background-color:#252831');
 
   if (!reviews) {
     const noReviews = document.createElement('p');
