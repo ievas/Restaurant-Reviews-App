@@ -134,6 +134,7 @@ fillReviewsHTML = (reviews = self.restaurant.reviews) => {
   container.appendChild(title);
   title.setAttribute('style', 'background-color:#252831');
 
+
   if (!reviews) {
     const noReviews = document.createElement('p');
     noReviews.innerHTML = 'No reviews yet!';
@@ -155,6 +156,8 @@ createReviewHTML = (review) => {
   const name = document.createElement('p');
   name.innerHTML = review.name;
   li.appendChild(name);
+  name.setAttribute('class', 'review-title');
+  name.setAttribute('style', 'background-color: #ffa500')
 
   const date = document.createElement('p');
   date.innerHTML = review.date;

@@ -4,6 +4,16 @@ let restaurants,
 var newMap
 var markers = []
 
+//serviceWorker start
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function(){
+    navigator.serviceWorker.register('js/sw.js')
+    .catch(function(error){
+    console.error(error);
+    });
+  });
+}
+
 /**
  * Fetch neighborhoods and cuisines as soon as the page is loaded.
  */
@@ -123,7 +133,6 @@ updateRestaurants = () => {
     }
   })
 }
-
 /**
  * Clear current restaurants, their HTML and remove their map markers.
  */
@@ -201,8 +210,8 @@ addMarkersToMap = (restaurants = self.restaurants) => {
     }
     self.markers.push(marker);
   });
-
 }
+
 /* addMarkersToMap = (restaurants = self.restaurants) => {
   restaurants.forEach(restaurant => {
     // Add marker to the map
