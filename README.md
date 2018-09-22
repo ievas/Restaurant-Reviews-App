@@ -1,12 +1,9 @@
-# Mobile Web Specialist Certification Course
----
-#### _Three Stage Course Material Project - Restaurant Reviews_
 
-## Restaurant Reviews: Stage 1
+## Restaurant Reviews App: Stage 1
 
 ### Specification
 
-Students have been provided the code for a restaurant reviews website. Student's job was to update the code to resolve these issues while still maintaining the included functionality.
+Students have been provided the code for a restaurant reviews website. Student's job was to update the code to 1) add responsiveness to the page 2) improve accessibility 3) to implement offline availability while still maintaining the included functionality.
 
 ### How to set up a local server
 
@@ -33,4 +30,5 @@ Mayguen Ojeda's project: https://github.com/Mindgames55/restaurant-reviews-app
 ### Authors
 
 Starter code: Udacity
+
 Student: Ieva Ritina
