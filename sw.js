@@ -30,7 +30,7 @@
     );
  });
 
- self.addEventListener('fetch', function(event){
+ self.addEventListener('fetch', function(event) {
    event.respondWith(
      caches.match(event.request).then(function(response){
        if(response){
@@ -41,7 +41,7 @@
          console.log('Not found');
          return fetch(event.request).then(function(response){
            let clonedRes = response.clone();
-           caches.open(v1).then(function(cache){
+           caches.open('v1').then(function(cache){
              cache.put(event.request, clonedRes);
            });
            return response;

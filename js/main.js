@@ -7,13 +7,12 @@ var markers = []
 //serviceWorker start
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', function(){
-    navigator.serviceWorker.register('js/sw.js')
+    navigator.serviceWorker.register('/sw.js')
     .catch(function(error){
     console.error(error);
     });
   });
 }
-
 /**
  * Fetch neighborhoods and cuisines as soon as the page is loaded.
  */
@@ -173,11 +172,11 @@ createRestaurantHTML = (restaurant) => {
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
   li.append(image);
 
-  const name = document.createElement('h1');
+  const name = document.createElement('h2');
   name.innerHTML = restaurant.name;
   li.append(name);
   //document.getElementsByTagName('h1').setAttribute('span','background-color: #525252');
-  let child = document.createElement('h1');
+  let child = document.createElement('h2');
   child.textContent = name;
   name.setAttribute('style', 'background-color:#252831');
 
