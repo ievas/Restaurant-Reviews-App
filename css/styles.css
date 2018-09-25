@@ -150,8 +150,10 @@ nav h1 a {
   padding: 30px 15px 60px;
   text-align: center;
 	display: flex;
-	flex-direction: column;
-	align-items: center;
+	/*flex-direction: column;*/
+	flex-wrap: wrap;
+	justify-content: center;
+	/*align-items: center;*/
 }
 #restaurants-list li {
   background-color: #fff;
@@ -163,6 +165,7 @@ nav h1 a {
   text-align: left;
 	max-width: 500px;
   width: 85%;
+	flex: 0 0 40%;
 }
 #restaurants-list .restaurant-img {
   background-color: #ccc;
@@ -263,7 +266,6 @@ nav h1 a {
   width: 100%;
 	display: flex;
 	flex-direction: column;
-	grid-template-rows: auto;
 	align-items: center;
 	position: relative;
 	/*top: 60px;*/
@@ -271,6 +273,8 @@ nav h1 a {
 #reviews-container {
 	align-self: center;
 	padding: 40px 40px 30px;
+	flex-wrap: wrap;
+	justify-content: space-between;
 }
 #reviews-container h2 {
   color: #ffa500;
@@ -281,22 +285,26 @@ nav h1 a {
 #reviews-list {
   margin: 0;
   padding: 0;
-	display:grid;
 	align-self: center;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: stretch;
+	/*justify-content: space-between;
 	/*flex-direction: column;*/
 }
 #reviews-list li {
   background-color: #fff;
     border: 2px solid #f3f3f3;
-  display: grid;
+  /*display: grid;*/
   list-style-type: none;
   margin: 0 30px 30px;
   overflow: hidden;
   padding: 0 20px 20px;
   position:static;
-  width: 80%;
-	max-width: 480px;
-	align-self: center;
+  /*width: 30%;*/
+	/*max-width: 480px;*/
+	flex: 0 0 38%;
+	/*min-height: 250px;*/
 }
 #reviews-list li p {
   margin: 0 0 10px;
