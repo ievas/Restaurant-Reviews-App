@@ -12,7 +12,7 @@ body,td,th,p{
 
 }
 body {
-	background-color: fdfdfd;
+	background-color: #fdfdfd;
 	margin: 0;
 	position:relative;
 	/*box-sizing: border-box;*/
@@ -287,7 +287,7 @@ nav h1 a {
   padding: 0;
 	align-self: center;
 	display: flex;
-	flex-wrap: wrap;
+	/*flex-wrap: wrap;*/
 	align-items: stretch;
 	/*justify-content: space-between;
 	/*flex-direction: column;*/
@@ -297,7 +297,7 @@ nav h1 a {
     border: 2px solid #f3f3f3;
   /*display: grid;*/
   list-style-type: none;
-  margin: 0 30px 30px;
+  margin: 0 20px 30px;
   overflow: hidden;
   padding: 0 20px 20px;
   position:static;
@@ -318,4 +318,20 @@ nav h1 a {
 	text-transform: uppercase;
 	letter-spacing: 5px;
 	text-align: center;
+}
+
+@media only screen and (max-width: 765px){
+	#reviews-list li, #restaurants-list li{
+		flex: 0 0 100%;
+	}
+}
+@media only screen and (min-width: 767px){
+	#reviews-list li, #restaurants-list li{
+		flex: 0 0 45%;
+	}
+}
+@media only screen and (min-width: 1200px){
+	#reviews-list li, #restaurants-list li{
+		flex: 0 0 30%;
+	}
 }
